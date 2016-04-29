@@ -1,1 +1,1 @@
-web: gunicorn flask_hello:create_app\(\) -b 0.0.0.0:$PORT -w 3
+web: gunicorn flask_hello:create_app\(\) --access-logfile - --error-logfile - -t 300 -b 0.0.0.0:$PORT -w 3
